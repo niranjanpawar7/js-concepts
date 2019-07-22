@@ -1,0 +1,80 @@
+{
+  "country": [
+    {
+      "id": "usa",
+      "name": "United States",
+      "states": [
+        {
+          "cities": [
+            {
+              "area": "12345 sqkm",
+              "id": "usaState1City1",
+              "name": "City 1"
+            },
+            {
+              "area": "12345 sqkm",
+              "id": "usaState1City2",
+              "name": "City 2"
+            }
+          ],
+          "id": "usaState1",
+          "name": "State 1 USA"
+        },
+        {
+          "cities": [
+            {
+              "area": "12345 sqkm",
+              "id": "usaState2City3",
+              "name": "City 3"
+            },
+            {
+              "area": "12345 sqkm",
+              "id": "usaState2City4",
+              "name": "City 4"
+            }
+          ],
+          "id": "usaState2",
+          "name": "State 2 USA"
+        }
+      ]
+    },
+    {
+      "id": "aus",
+      "name": "Australia",
+      "states": [
+        {
+          "cities": [
+            {
+              "area": "12345 sqkm",
+              "id": "ausState1City5",
+              "name": "City 5"
+            },
+            {
+              "area": "12345 sqkm",
+              "id": "ausState1City6",
+              "name": "City 6"
+            }
+          ],
+          "id": "ausState1",
+          "name": "State 1 Australia"
+        },
+        {
+          "cities": [
+            {
+              "area": "12345 sqkm",
+              "id": "ausState2City7",
+              "name": "City 7"
+            },
+            {
+              "area": "12345 sqkm",
+              "id": "ausState2City8",
+              "name": "City 8"
+            }
+          ],
+          "id": "ausState2",
+          "name": "State 2 Australia"
+        }
+      ]
+    }
+  ]
+}

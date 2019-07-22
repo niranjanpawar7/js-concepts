@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Sorting</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+
+   
+
+ <script>
+ 
+ // Sort() Function works with string and number
+ // it does not work with Objects you have to pass funtion in sort with a and b param
+ 
+ // Resvers() works for descending order sorting
+ 
+ let numArr = [5, 4, 1 , 7];  
+ numArr.sort();
+ console.log(numArr);
+
+
+// sorting For string, It will start From Capital Letter
+ let strArr = ['a', 'b', 'd', 'C'];  
+ strArr.sort();
+ console.log(strArr);
+
+
+// if both string & number Present -: 1-numbers, 2-Capital letters, 3-letters
+
+ let strNumArr = ['a', 7, 2, 'C'];  
+ strNumArr.sort();
+ console.log(strNumArr);
+
+
+// Sorting Obj with sort() but with numbers only; 
+// both params hold seprate obj for comparison
+
+let nameArray =[
+    {  name: 'Niranjan', age : 29 },
+    {  name: 'Pavan', age : 27 },
+    {  name: 'Anuja', age : 26 }, 
+    {  name: 'Adi', age : 22 }, 
+    {  name: 'Roshan', age : 20 }, 
+];
+
+nameArray.sort(function(a, b){
+    return a.age - b.age
+});
+console.log(nameArray);
+
+
+ 
+ // custom Sorting 
+
+ 
+
+ 
+  
+ </script>
+</body>
+</html>

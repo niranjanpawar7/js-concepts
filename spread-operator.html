@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Spread Operator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+    <script>
+        
+    /*
+     //ES5    
+      var ages = [10, 20, 30, 40];
+
+      function calculateAge(a, b, c, d){ 
+            console.log( a + b + c +  d );
+      }
+
+      calculateAge.apply(null, ages); 
+    */
+
+
+    //Spread Operator  
+
+    var ages = [50, 20, 30, 40];
+
+    function calculateAge(a, b, c, d){ 
+        console.log( a + b + c +  d );
+    }
+
+    calculateAge(...ages);
+
+
+    var Child = ['Niranjan', 'Anuja', 'pavan'];
+    var Parent = ['Aai, papa'];
+
+    var family = [...Child, ...Parent]
+
+    console.log(family); 
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Bind Call Apply</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+    <script>
+        /* 
+            - Call sets this variable manually
+            - Call can pass Array, Object, String also
+
+            - Apply sets this variable manually but afterwards parameter accpet in array only
+            - Apply can pass array only 
+            
+
+            *Imp - In call, apply && bind reference object should be at first parameter
+       */
+    
+     var userData = {
+             firstName : 'Niranjan',
+             lastName: 'Pawar',
+             age: 27,
+             contact: 9096994949,
+     }    
+
+    // Call -------------->   
+   
+      
+         function person(){
+             console.log('This', this);
+         } 
+         person.call(userData); 
+    
+
+    // Apply -------------->   
+     
+     /*
+     1 -     
+         function person(firstName, lastName){ 
+             console.log('This is manually set by apply ------->', this);
+             console.log('parameters ------------->',firstName, lastName);
+         } 
+         person.apply(userData, ['Pavan', 'pawar']);  
+
+
+     2 -
+
+            var ages = [10, 20, 30, 40];
+
+            function calculateAge(a, b, c, d){ 
+                    console.log( a + b + c +  d );
+            }
+
+            calculateAge.apply(null, ages); 
+    
+    */     
+
+        
+
+    // Bind -------------->   
+         
+    /*
+         function person(city, homeTown){  
+            console.log(this.firstName + ' ' + this.lastName + ' From ' + city + ' ' + homeTown);
+         }  
+
+         let bindPerson = person.bind(userData, 'Junnar', 'Pune');  
+         bindPerson();
+    */
+    
+        // we have bind junnar pune for future use
+        // we have assign bind function to variable 
+        // we can use it in future   
+          
+
+    </script>
+</body>
+</html>

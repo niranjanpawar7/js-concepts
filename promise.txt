@@ -1,0 +1,11 @@
+
+
+- The executing function(executor) accepts two parameters resolve and reject.
+
+- Resolve and Reject are callback functions. 
+
+- Promises are used for handling asynchronous operations also called blocking code.
+    Eg -:  Can be DB, I/O or API calls,
+
+- Once that completes it either calls resolve on success or reject function on error.
+

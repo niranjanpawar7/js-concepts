@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+     
+    <title>Promises</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+    <script>
+    
+      // cleanRoom , removeGarbadge, getIceCreame  
+
+
+    /*    
+        var cleanRoom = () => { 
+            return new Promise((resolve, reject) => {
+                resolve('Clean the Room ');
+                //reject('Room is Not clean');
+            })
+        };
+
+        var removeGarbadge = (message) => { 
+            return new Promise((resolve, reject) =>{ 
+                resolve( `${message}` + 'Remove garbadge ')
+            })
+        }
+
+        var getIceCreame = (message) => { 
+               return new Promise((resolve, reject) => { 
+                   resolve( `${message}` + 'and won The Icecreame ');
+               }) 
+        }
+
+    //Promise chaining    
+
+        
+     cleanRoom()
+            .then((result) => { 
+                return removeGarbadge(result);
+            })
+            .catch(
+                (error) =>{
+                      console.log('Error', error);  
+                }
+            )
+            .then((result) => { 
+                return getIceCreame(result);
+            })
+            .then((result) => { 
+                console.log(`${result}` + ' -----> Finished');
+            });
+     
+    */
+    
+    // ForkJoin Requests -> Multiple Request on the same time
+
+    /*        
+        Promise.all([cleanRoom(), removeGarbadge(), getIceCreame()])
+        .then(
+            (resp) =>{
+                    console.log(`${resp}` + 'Finshed');
+            }
+        );
+    */        
+
+    // Any One Reuest succes then get response no matter for other request failure
+
+
+    /*
+     Promise.race([cleanRoom(), removeGarbadge(), getIceCreame()])
+     .then(
+         (response) => {
+                console.log('Race', `${response}`)
+         }
+     )       
+
+    */
+
+
+
+
+    // roomClean , collectGarbadge, tvOn , icecrame, welcomeFriends
+    
+    let roomClean = new Promise ((resolve, reject) => {
+            setTimeout (() => {
+                resolve('Room is Cleaned');
+            }, 2000)
+     });       
+
+
+    let collectGarbadge = roomClean.then((res) => {
+         return new Promise((resolve, reject) => {
+             resolve(res + 'and garbadge also')
+         });
+     }); 
+
+    let tvOn =  collectGarbadge.then((res) => { 
+         return new Promise((resolve, reject) =>{
+             resolve(res + ' so lets on the TV');
+         })
+    });
+
+   let icecrame =  tvOn.then((res) => {
+       return new Promise((resolve, reject) => {
+           resolve(res + ' and have some chocolate Icecream');
+       })  
+    });
+
+    let welcomeFirends = icecrame.then((res) => {
+        return new Promise((resolve, reject) => {
+            resolve(`${res} and friends are here`);
+        })
+    })
+
+    welcomeFirends.then((res) => {
+        console.log(`${res}`);
+    })
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+    <script>
+        
+         var personProto = {
+             calculateAge : function(){
+                 console.log(2019 - this.yearofBirth);
+             }
+         }
+
+         var john = Object.create(personProto);
+         john.name = 'Niranjan';
+         john.age = 1991;
+
+
+         var pavan = Object.create(personProto,{  
+             name : {value : 'Pavan'},
+             yearofBirth : {value : 1993 }
+         })
+
+        
+
+    </script>
+</body>
+</html>

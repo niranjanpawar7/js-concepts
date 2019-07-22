@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
+    
+</head>
+<body>
+<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, dolor odio perspiciatis dolore totam temporibus ipsam alias quod non ratione quam vel fugit a, delectus recusandae. Aut voluptates molestiae porro?</p>
+<button type="button" class="myBtn">Clear</button>  
+   <script>
+       
+  
+
+  // Clear SetTimeout
+
+   var timer = setTimeout(() =>{ 
+        $('p').css('background', 'red');
+   }, 2000)
+
+   // after clearTimeout function, Settimeout function code will not get excuted
+   // Function express you need to clear the timeout
+
+   $('.myBtn').on('click', function(){ 
+       debugger
+        clearInterval(timer); 
+   });
+
+
+   
+   // Clear Interval
+
+   // Cleartimeout get excuted continously accroding to timer
+   // once your condition get matched then you can do clearinterval
+   // it will stop excution of inerval code
+   
+
+
+   counter = 0;
+   var inter = setInterval(() =>{
+            counter++
+            if(counter === 10){
+                    clearInterval(inter);
+            }
+            console.log(counter);
+   }, 2000)
+   
+  
+
+
+
+   
+
+
+
+   </script>
+    
+</body>
+</html>

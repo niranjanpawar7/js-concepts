@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Analaytical Program</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+    <script>
+        
+        // Count calculations
+        
+        /*
+        
+            var test = [
+                    { a : 10, b: 20},
+                    { a : 20, b: 30},
+                    { a : 30, b: 40},
+                ];
+            
+            let count = 0;
+            var calculations =  test.filter((item) => {
+                count += item.b;
+            });
+
+            console.log('calculations', count);
+        
+        */  
+       
+
+       // Array modification with orignal Array
+
+       /*
+            var tempArr = [1, 2, 3, 4];
+
+             tempArr.unshift('Start');    
+             tempArr.push('End'); 
+             console.log('First Approach', tempArr);    
+
+            tempArr = ['start', ...tempArr, 'End'];   
+            console.log('Second Approach', tempArr); 
+       */     
+
+       // Hositing Trace the output
+
+       /*
+            var num = 4;
+
+            function outer(){ 
+                    var num = 2;
+                function inner(){
+                        
+                        // hositing num = undefined 
+                        // num ++  undefined ++ -------> NAN
+
+                        num++
+                        var num = 3;
+                        console.log(num);
+                }
+
+                inner();
+            }
+
+            outer();
+        */
+
+        // trace the ouput 
+
+        /*
+            console.log(typeof 1);  // --> number
+
+            console.log(typeof typeof 1);  // --> string
+
+            var a = {
+                name : 'niranjan'
+            }; 
+            console.log(typeof a);
+
+            console.log(typeof typeof a); // --> string
+        */
+
+
+        // Tricky js    
+        /*
+
+            var hero = {
+                _name : 'Nirnajan',
+                getIdentity : function(){  
+                    return this._name;
+                }
+            };
+    
+            // var stoleIdentity = hero.getIdentity(); // return Nirajan  
+            // console.log(stoleIdentity);
+
+            // Because this refers to window in below function
+
+            var stoleIdentity = hero.getIdentity; // return undfined
+            var stoleIdentity = hero.getIdentity.bind(hero)
+            console.log(stoleIdentity()); //  
+        */ 
+
+
+       /*  console.log('papa', [1] + [3]);  //  --> tyepcast into string 13 */
+
+
+       // make any wepage editable
+
+       /*  document.body.contentEditable = true; */
+
+        // Argumnets  *
+        /*
+            function y (){
+                debugger;
+                console.log(this.length); 
+            }
+
+                
+            var x = {
+                length : 5,
+                method: function(y){
+                    debugger;
+                        arguments[0](); 
+                        // arguments always hold array
+                        // in this array y, 1, 10 will be elements
+                        // so length will be 3
+                },
+            };  
+
+            x.method(y, 1, 10);
+        */
+
+
+        /*
+
+            const x = 'constructor';
+            console.log(x[x](05)); // it converts into strig
+        
+        */
+
+
+        var A = {
+            x : function(){
+                   console.log('x'); 
+                   return A;
+            },
+            y : function(){
+                   console.log('y'); 
+                   return A;
+            },
+            z : function(){
+                   console.log('z'); 
+            },      
+        };
+
+
+        A.x().y().z();
+
+
+
+    </script>
+</body>
+</html> 

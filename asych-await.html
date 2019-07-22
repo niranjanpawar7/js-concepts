@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+     
+    <title>Asych Await</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+    <script>
+
+
+   
+  console.log('Person1');
+  console.log('Person2');
+  console.log('Person3');
+  console.log('Person4'); 
+ 
+
+
+      // Async - > when there is asynch you have to wait
+    
+    /*
+     console.log('Person1', 'Ticket');
+     
+     var PromiseWifeBringingTickets = new Promise((resolve, reject) => {
+       
+          setTimeout(() => {
+            resolve('Ticket');
+          }, 3000)
+        
+     });  
+     
+     console.log('Person2', 'Ticket');
+
+      
+      
+   var getPopCorn = PromiseWifeBringingTickets
+    .then((res) => {
+      debugger
+          console.log('Husband :- lets go in');
+          console.log('wife :- I am hungry');
+          return new Promise((resolve, reject) => {
+            resolve((`${res} + popcorn`));
+          })
+          
+    });   
+    
+
+   var needWater =  getPopCorn
+    .then((res) =>{
+        return new Promise((resolve, reject) =>{
+          console.log('Husband :- lets go in now');
+          console.log('wife :- I want water');
+          resolve(`${res} + water`);
+        }) 
+    })
+
+
+    needWater
+    .then(
+      (res) => {
+          console.log(res);
+      }
+    )
+    
+  */ 
+
+
+
+
+
+
+
+
+
+    // you have to write await in asynch function only
+    //  error - > await is only valid in async function
+
+      /*
+     const preMovie = async () => {
+       
+        const wifebringingTickets = new Promise((resolve, reject) =>{
+                setTimeout(() =>{
+                  resolve('Tickets');
+                }, 1000)
+              
+          }); 
+
+        const getPopCorn = new Promise((resolve, reject) => resolve('popcorn'));
+
+        const getWater = new Promise ((resolve, reject) => resolve('Water'));  
+
+        const tickets = await wifebringingTickets;
+        const popCorn = await getPopCorn;
+        const water = await getWater;
+          
+        console.log(tickets + popCorn);
+        console.log(popCorn);
+        console.log(water);  
+
+       // here is the way to send last with return   
+        return tickets;
+        
+     }
+
+     preMovie().then((res) =>{
+       console.log('res', res);
+     })
+
+
+     */
+
+
+
+     // roomClean , collectGarbadge, tvOn , icecrame, welcomeFriends
+
+      const cleaningService = async () => {
+
+        let roomClean = new Promise((resolve, reject) =>{
+              setTimeout(() =>{
+                  resolve('RoomClean');
+              }, 2000)
+        });
+
+
+        let collectGarbadge = new Promise((resolve, reject) => resolve('Cleared The garbadge'));
+
+        let tvOn = new Promise((resolve, reject) => resolve('Tv is On'));
+
+        let eatIceCreame = new Promise((resolve, reject) => resolve('Chocklate Icecreame'));
+
+        let welcomeFriends = new Promise ((resolve, reject) => resolve('yeah friends at home'));
+
+        // const clean = await roomClean;
+        // const garbadge = await collectGarbadge;
+        // const tv = await tvOn;
+        // const IceCreame = await eatIceCreame;
+        // const friends = await welcomeFriends
+
+        const [one, two, three, four, five ] = await Promise.all(roomClean, collectGarbadge, tvOn, eatIceCreame, welcomeFriends)
+
+        console.log(clean);
+        console.log(garbadge);
+        console.log(tv);
+        console.log(IceCreame);
+        console.log(friends);
+        
+
+        return clean;
+
+      };
+
+      cleaningService().then(
+        (res) => {
+          console.log('Final Response', res);
+        }
+      )
+
+
+
+
+
+    </script>
+</body>
+</html>

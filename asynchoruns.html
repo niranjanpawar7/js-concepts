@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Asynchoruns</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+    <script>
+    
+    // Below is Synchronus javacript code    
+    // because it is getting excute according to excution stack
+
+    /*
+        let secondCall = () =>{
+            console.log('second')
+        }; 
+
+        let firstCall = () =>{
+            console.log('first');
+            secondCall();
+            console.log('First ++++++++++')
+        }; 
+
+        firstCall();
+
+    */     
+
+    // Below is Asynchronus javacript code    
+    // because it is getting excute according to excution stack    
+    // It has callback so it will go through Event Loop (Response, Error is also callback)
+
+     
+        let secondCall = () => { 
+                setTimeout (() => {
+                    console.log('Asynch call ---> Second');
+                },3000) 
+        };
+
+        let firstCall = () => {
+            console.log('First');
+            secondCall();
+            console.log('Hey First')
+        }   
+
+        firstCall();
+        
+
+    </script>
+</body>
+</html>

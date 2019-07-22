@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>closure</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+    
+    <script>
+    /* 
+    outer function pop from the excution stack,
+    but still inner function can access outer functions variable 
+    that is called closure.
+    */
+
+
+    /*
+         function retirement(retirementAge){ 
+            return function(yearofBirth){ 
+                var age = 2019 - yearofBirth;
+                console.log('Retirment year is --->', retirementAge - age);
+            } 
+         } 
+
+         var india = retirement(70);
+         india(1991);
+
+         var austrelia = retirement(80);
+         austrelia(1991);
+
+         var pakistan = retirement(90);
+         pakistan(1991);
+    */
+        
+        function retirement(retirementAge){ 
+            return function(yearofBirth){ 
+                var age = 2019 - yearofBirth;
+                console.log('Retirment year is --->', retirementAge - age);
+
+                return function(randomValue){
+                       console.log(randomValue, retirementAge - age ) 
+
+                      return function(randomValue1){
+                            console.log(randomValue1, randomValue, retirementAge - age ) 
+                      } 
+                }
+
+                
+            } 
+            
+         } 
+       
+         retirement(1991)(65)('papa')('ilu');
+    </script>
+</body>
+</html>

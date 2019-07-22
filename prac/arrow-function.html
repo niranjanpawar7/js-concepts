@@ -1,0 +1,91 @@
+  <html>
+  <head>
+
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+
+
+
+
+
+<script type="text/javascript">
+// The slice() method returns the selected elements in an array, as a new array object.
+
+
+$(document).ready(function() {
+
+// arroow function cant be constructor
+
+// no new keuword can use
+
+// no this reference to object context
+
+
+// arrow function widout parametres
+  myfunction = ()  => { console.log('Niranjan')}
+
+  myfunction();
+
+// arrow function with arguments and paramteres
+
+ myfunction2 = data => { console.log(data) };
+
+
+  myfunction2('pavan');
+
+  //var checkConstructor  = new myfunction2('check');
+  // Error -  myfunction2 is not a constructor
+
+// ================================================================
+
+
+  // this is normal function where u can use you function as constructor
+
+  // new keyword is allowed
+
+  // this is reference to parent object context
+
+
+  function Person(data) {
+    console.log(data)
+  }
+
+  var test = new Person('Anuja');
+
+  var test2 = new Person('aditya');
+
+
+  // console.log(test);
+  // console.log(test2);
+
+
+
+
+
+});
+
+
+
+
+
+
+</script>
+
+  </body>
+  </html>
+
+
+</script>
+
+  </body>
+  </html>

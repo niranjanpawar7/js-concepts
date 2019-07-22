@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Promises</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+    <script>    
+
+     /* 
+        var a = 100;
+
+         function b (){
+             var a = 50;
+             console.log('Exp 50  -->', a);  
+         }
+
+         function Ado(){
+             console.log('Exp 100 -->', a);  
+             a = 90;
+             b();
+             console.log('exp  90 -->', a);   
+         }
+
+         console.log('Exp 100  -->', a);   
+         
+         Ado(); 
+         console.log('exp  90  --> ', a);  
+    */     
+      
+
+    // hoisting Question
+
+    /*
+
+        var a = 10;    
+
+        function papa (){
+            console.log('Exp undefined -->', a);
+            var a = 20;
+        }
+
+        console.log('Exp 10 --> ', a);
+        papa();
+        console.log('Exp 10 --> ', a); 
+    */  
+
+    //Eg - 1
+      
+    /*    var a = 10;    
+
+        function papa (){
+            console.log('Exp 10 -->', a);
+             a = 20;
+             dad();
+             console.log('Exp 20 -->', a);
+
+        }
+
+        function dad(){
+           var a = 50;
+            console.log('Exp 50 --> ', a); 
+        }
+
+        console.log('Exp 10 --> ', a);
+        papa();
+        console.log('Exp 20 --> ', a); 
+    */
+
+    // eg - 2
+
+    /*
+        var a = 10;    
+
+        function papa (){
+            console.log('Exp 10 -->', a);
+             a = 20;
+             dad();
+             console.log('Exp 50 -->', a);
+
+        }
+
+        function dad(){
+            a = 50;
+            console.log('Exp 50 --> ', a); 
+        }
+
+        console.log('Exp 10 --> ', a);
+        papa();
+        console.log('Exp 50 --> ', a); 
+     
+    */
+
+    // In below newTest(a)    
+        // console.log('Exp 100 -->', a);    wont give undefined 
+        // because you are getting data from another function
+
+    /* 
+      var a = 90;   
+
+        function test(a){
+            console.log('Exp 50 -->', a); 
+            a = 100; 
+            console.log('Exp 100 -->', a); 
+            newTest(a);  
+
+        }
+
+        function newTest(a){
+            console.log('Exp 100 -->', a);    
+            var a = 500;
+            console.log('Exp 500 -->', a);    
+        }
+
+        console.log('Exp 90 -->', a);    
+
+        a = 50;
+        
+        console.log('Exp 50 -->', a);    
+
+        test(a); 
+
+        console.log('Exp 50 -->', a);
+     */
+
+    /*
+
+        var a = 90;   
+
+        function test(a){
+            console.log('Exp 50 -->', a); 
+            a = 100; 
+            console.log('Exp 100 -->', a); 
+            newTest();  
+
+        }
+
+        function newTest(){
+            console.log('Exp Undefined -->', a);    
+            var a = 500;
+            console.log('Exp 500 -->', a);    
+        }
+
+        console.log('Exp 90 -->', a);    
+
+        a = 50;
+
+        console.log('Exp 50 -->', a);    
+
+        test(a); 
+
+        console.log('Exp 50 -->', a);
+    */ 
+
+
+     function b(){
+         // here is global scope
+         console.log('Exp 2 --->', data);
+
+         //console.log('Exp 2 --->', data);
+     }   
+
+     function a(){
+         // here is local scope
+        var data = 2;
+        // data = 2; it will change the global var value from 1 to 2
+         b();
+     }   
+
+     var data = 1;   
+
+     a();
+
+
+
+    </script>
+</body>
+</html>

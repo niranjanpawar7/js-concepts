@@ -1,0 +1,69 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/fabric.min.js"></script>
+
+</head>
+<body>
+
+
+	<div class="container">
+  <div class="clearfix"></div>
+  <br>
+  <br><br>
+
+   <script>
+
+ $(document).ready(function(){
+
+
+    function Niranjan (first, last){
+      debugger;
+        this.firstName = first;
+        this.lastName = last;
+
+        return this;
+    }
+
+    function Salary (sal, firstName, lastName) {
+      debugger;
+         this.salary = sal;
+         Niranjan.call(this, firstName, lastName);
+         return this;
+    };
+
+
+    Niranjan.prototype.getFullname = function() {
+      debugger;
+       return this.firstName  + ' ' +  this.lastName;
+    };
+
+    Salary.prototype.getSalary = function() {
+      debugger;
+       return this;
+
+    };
+
+    debugger;
+    var check = new Niranjan('niranjan', 'pawar');
+    var doSalary = new Salary(1000, check.firstName,check.lastName);
+
+
+
+
+
+    debugger;
+     console.log(doSalary.getSalary());
+     // console.log(check.getFullname());
+
+ })
+
+ </script>
+
+
+
+     </div>
+     </body>
+     </html>

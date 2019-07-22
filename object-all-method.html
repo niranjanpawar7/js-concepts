@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Object Method</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+
+    <!-- 
+
+        1 - Object.keys()
+        2 - Object.values()
+        3 - Object.assign()
+        4 - Object.seal()
+        5 - Object.isSealed()
+        6 - Object.freeze()
+        7 - Object.isFrozen()
+        8 - objec.create()
+
+    -->
+    
+    <script>
+    // object.keys() = > for key of object 
+    // object.val() = > for val of object
+
+    /*    
+        var test = {
+                name: 'Niranjan',
+                age : 28
+            }
+
+        console.log('Key', Object.keys(test));
+        console.log('val', Object.values(test));
+    */    
+
+
+    // Object.Entries() makes object iterable
+
+    /*    
+       var tempObj = {
+          first : {
+              name : 'Niranjan',
+              education : [10, 12, 'BCA', 'MCA',]
+          } 
+       };
+
+       console.log(tempObj);
+       let newObj = Object.entries(tempObj); 
+       let lolObj = {};
+       console.log(newObj);
+
+        for(let data of newObj){ 
+           console.log(data[1].education); 
+        }        
+     
+     */
+
+    // Object Assign => 
+
+        // You can concreate the  Obj in new Obj
+        // First param is source and second or n number params are targert    
+        // so first param will gather the data from rest of all the objects
+
+    /*    
+        var a = {
+            name : 'Niranjan'
+        };
+
+        var b = {
+            age : 28
+        };
+
+        var c = {
+            contact : 9096994949
+        }; 
+
+        let completeObj = Object.assign({}, a, b ,c); 
+
+        console.log(completeObj);
+    */
+
+
+    // Object Seal => 
+
+    // u can modify the curent Obj only,
+    // No delete no addition in the Obj 
+     
+
+    /*     
+        var a = {
+            name : 'niranjan'
+        };
+
+        console.log(a);
+        Object.seal(a);
+
+        a.name = 'Pavan'; 
+        a.lastName = 'Pawar';
+
+        delete a.name;
+
+        console.log(a);
+    */ 
+
+
+    // Object Freeze =>
+        
+        // Just freeze nothing can happen to Obj
+        // no modification , deletion , addition
+
+    /*    
+        var a = {
+            name : 'niranjan'
+        };
+
+        console.log(a);
+        Object.freeze(a);   
+         a.fullName = 'pawar';
+        console.log(a);
+        
+    */
+
+
+ 
+  // Object.isSealed(obj);  && Object.isFrozen(obj);
+
+        // both method returns the Boolean value 
+
+
+     var a = {
+         name : 'niranjan'
+     };
+
+     var b = {
+         name : 'niranjan'
+     };
+
+     let data = Object.is(a, b);
+
+     console.log(data);
+
+
+
+
+    </script>
+</body>
+</html>

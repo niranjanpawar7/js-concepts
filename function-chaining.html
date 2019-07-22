@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Analaytical Program</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+    <script>
+        
+       // Retun this is must from function for function chanining
+
+        var testObj = function(){   
+
+            this.i = 0;
+
+            this.add = function (i) {
+                  this.i += i;  
+                  return this;
+            }
+
+            this.substract = function(i){
+                this.i -= i; 
+                return this;
+            }
+
+            this.print = function(i){
+                console.log(this.i);
+                return this;
+            } 
+        }
+
+        var x = new testObj();
+
+        x.add(50).substract(20).print();
+        
+    
+    </script>
+</body>
+</html> 

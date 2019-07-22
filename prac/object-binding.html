@@ -1,0 +1,92 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/fabric.min.js"></script>
+
+</head>
+<body>
+
+
+	<div class="container">
+  <div class="clearfix"></div>
+  <br>
+  <br><br>
+
+   <script>
+    
+ $(document).ready(function(){
+ //    function Niranjan (first, last){   
+ //        var a = 10;  
+ //        console.log(this.test); 
+ //    } 
+ //    var test = [
+ //        {
+ //          x:10,
+ //          y:20,
+ //          z:30 
+ //        },
+ //        {
+ //          x:20,
+ //          y:20,
+ //          z:30 
+ //        },
+ //        {
+ //          x:30,
+ //          y:20,
+ //          z:30 
+ //        },
+ //        {
+ //          x:40,
+ //          y:20,
+ //          z:30 
+ //        }
+ //   ]; 
+ //   debugger;
+ //   console.log(Niranjan.bind(test));
+
+
+ //   // console.log(test) 
+ //   // console.log(Niranjan);
+ function niranjan(){
+   
+    console.log(this);
+  }
+
+    var test = [
+        {
+          x:10,
+          y:20,
+          z:30 
+        },
+        {
+          x:20,
+          y:20,
+          z:30 
+        },
+        {
+          x:30,
+          y:20,
+          z:30 
+        },
+        {
+          x:40,
+          y:20,
+          z:30 
+        }
+   ]; 
+
+  // setTimeout(niranjan.bind(test), 1000); 
+    niranjan.call(test);
+ });   
+
+
+ 
+ </script>
+      
+    
+ 
+     </div>
+     </body>
+     </html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Promises</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+    <script>
+    
+    // const numArray = [10, 20, 30, 40, 50];
+     
+    // var resp = numArray.filter((Item, Index) => {
+    //     console.log(`${Index}  ${Item}`); 
+    // });
+    
+     
+    
+    // why arrow
+
+    /* 
+        - arrow function does not have its own this
+        - it takes parents this as this
+        - if function own this do not use fat arrow function
+           ->  Like in Obj methods
+
+    */
+
+    // ES-5    
+    var x = function(){
+        this.val = 1;
+
+        setTimeout(function(){ 
+            this.val++;
+            console.log(this.val);
+
+        }, 2000);
+    }
+
+    // ES-6
+    var x = function(){
+        this.val = 1;
+
+        setTimeout(() =>{ 
+            this.val++;
+            console.log(this.val);
+
+        }, 2000);
+    }
+    
+    var x = new x();
+
+    //Es5
+    const obj = {
+           x : 1,
+           getX(){ 
+               debugger
+                let inner = function() {
+                   console.log(this.x); 
+               } 
+               inner();
+           }
+    }
+
+
+    // Es6
+    const obj = {
+           x : 1,
+           getX(){ 
+               debugger
+                inner = () => {
+                   console.log(this.x); 
+               } 
+               inner();
+           }
+    }
+
+       obj.getX(); 
+
+
+
+    // Profile
+
+    const profileA  = {
+         name : 'Niranjan',  
+             getName : () =>{  
+                console.log('This refers to window -->  ', this.name); // undefined because arrow function do not have own this
+            }
+            
+    }
+
+    profileA.getName();
+
+
+     const profileB  = {
+         name : 'Niranjan', 
+       getData: function(){  
+            const getName = () =>{  
+                console.log(this.name); // undefined because arrow function do not have own this
+            }
+            getName()
+        }   
+     };
+
+
+     profileB.getData();    
+
+
+    
+
+    </script>
+</body>
+</html>

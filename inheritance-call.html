@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+     
+    <title>2 class Inheritance</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+    <script>
+     
+     function Job (){
+         this.pay = true;
+     };
+
+     Job.prototype.print = function(){
+         console.log(this.pay ? 'Please hire me' : 'Get Lost')
+     };
+
+     TechJob = function(title, pay){
+        Job.call(this); 
+        this.title = title;
+        this.pay = pay;
+     }
+
+     TechJob.prototype = Object.create(Job.prototype);
+     //TechJob.prototype.constructor = TechJob;
+
+     var softwareJS =  new TechJob('Javascript', true);
+
+
+     console.log(softwareJS.print());
+      
+
+
+
+    </script>
+</body>
+</html>

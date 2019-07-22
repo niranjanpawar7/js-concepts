@@ -1,0 +1,58 @@
+  <html>
+  <head>
+
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+  var temp = [1, 2, 2, 3, 3, 4, 5, 6];
+
+
+  // new keyword
+  var unique = [... new Set(temp)];
+  console.log('with new kyword', unique);
+
+  console.log('=====================================');
+
+
+  // indexof
+
+  function RemoveDuplicates(index, val) {
+      return temp.indexOf(val) === index;
+  }
+
+  var test = temp.filter(RemoveDuplicates);
+
+  console.log('IndexOf', test);
+
+  console.log('=====================================');
+
+
+  // function UseMap(index, val) {
+  //   debugger;
+  //     return index;
+  // }
+
+  var getData = temp.map(Math.sqrt);
+
+  console.log(getData)
+
+
+})
+</script>
+
+  </body>
+  </html>

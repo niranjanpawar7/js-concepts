@@ -1,0 +1,65 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/fabric.min.js"></script>
+
+</head>
+<body>
+
+
+	<div class="container">
+  <div class="clearfix"></div>
+  <br>
+  <br><br>
+
+   <script>
+    
+ $(document).ready(function(){ 
+
+  var test = [
+      {
+        x:10,
+        y:20,
+        z:30 
+      },
+      {
+        x:20,
+        y:20,
+        z:30 
+      },
+      {
+        x:30,
+        y:20,
+        z:30 
+      },
+      {
+        x:40,
+        y:20,
+        z:30 
+      }
+  ];
+
+  var total = 0;
+
+  function niranjan(){ 
+    for(var i = 0; i < test.length; i++ ){
+       total = total + test[i].x; 
+    }  
+    console.log(total);
+  }
+
+
+  niranjan();
+   
+     
+ })    
+ 
+ </script>
+      
+    
+ 
+     </div>
+     </body>
+     </html>

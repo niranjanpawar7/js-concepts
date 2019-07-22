@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+    <script>
+       
+     // call by value : -
+      
+      /*
+            - if you are changing the value of global variable in inner function
+              it will not get change in out side of fuction 
+
+      */
+
+
+       // call by Reference : -
+      
+      /*
+            - if you are changing the value of global variable in inner function
+              it will change the golbal val out side of fuction 
+
+      */
+
+
+
+    // js works with pass by referance :-
+    /*
+         obj - ;
+        -  u can change the value  with a.name = 'test'
+        -  it will reflect in both function as well as global
+        -  because we are muttating the object value which is referance to a
+        -  reasign and mutable is different
+
+        Num -:
+        -  if u pass premitative value it wont change
+        -  because premitative values are not mutable 
+        -  u are reassining the value   
+
+    */                    
+        
+    //    let a = 100;
+
+       let a = {
+           num: 1
+       };
+
+       function change(a){
+             a = {};
+       }
+
+       change(a);
+
+       console.log(a);
+ 
+    </script>
+</body>
+</html>

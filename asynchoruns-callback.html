@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Asynchoruns</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+    <script>
+    
+    // call back hell
+    // call back in callback is hard to manage and it is totally messy
+    // so for that promises is used to avoid callback hell
+
+     function getRecipe(){
+            
+            setTimeout(()=>{
+                const recipeID = [1, 2, 3, 4];
+                console.log(recipeID);
+
+                setTimeout((id)=>{
+                    const recipe = {name : 'BoiledEgg', publisher: 'Nirnajan'};
+                    console.log(recipe.name + ' ' + recipe.publisher + ' ------>' + id);
+                }, 2500, recipeID)
+
+
+            }, 1500)
+     }
+
+     getRecipe();
+
+    </script>
+</body>
+</html>

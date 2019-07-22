@@ -1,0 +1,85 @@
+  <html>
+  <head>
+
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <style type="text/css">
+        section{
+          margin-bottom: 30px;
+        }
+        header{
+          background: green;
+        }
+        footer{
+          background: green;
+        }
+      </style>
+  </head>
+  <body>
+
+
+<script type="text/javascript">
+
+// function get hoisted entirly
+// var get hoisted without assignment
+
+
+// arr = [1, 2, 2, 3, 4]
+
+// function Niranjan(val, index) {
+//   debugger
+//    var test =  arr.indexOf(val) === index;
+//    console.log(test);
+//    return test;
+// }
+
+// var unique = arr.filter(Niranjan);
+// console.log(unique);
+
+var gLogNumber, gIncreaseNumber, gSetNumber;
+function setupSomeGlobals() {
+  debugger;
+  // Local variable that ends up within closure
+  var num = 42;
+  // Store some references to functions as global variables
+
+  gLogNumber = function() {
+    debugger;
+      console.log('gLogNumber', num);
+  }
+
+  gIncreaseNumber = function() {
+    debugger;
+      num++;
+      console.log('gIncreaseNumber', num)
+  }
+  gSetNumber = function(x) {
+    debugger;
+      num = x;
+      console.log('gSetNumber', x)
+  }
+}
+
+setupSomeGlobals();
+gIncreaseNumber();
+gLogNumber();
+gSetNumber(5);
+gLogNumber();
+
+var oldLog = gLogNumber;
+
+setupSomeGlobals();
+gLogNumber();
+
+oldLog()
+</script>
+
+  </body>
+  </html>

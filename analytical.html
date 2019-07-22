@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Analaytical Program</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+    <script>
+    
+    // Reverse String
+    
+    /*  
+        // inbuit  function
+
+        function resverseString (str){
+                let data = str.split('').reverse().join('');
+                console.log(data);
+
+        }; 
+
+        resverseString('Madam'); 
+
+       // Pure Js
+*
+        function resverseString (str){  
+            var newStr = ''; 
+             for(var i = str.length - 1; i >= 0; i--){ 
+                    newStr = newStr + str[i]; 
+             }    
+             console.log(newStr);  
+        }; 
+
+        resverseString('Madam');  
+    */
+    
+
+
+    // factorial and Addition 
+
+
+    /* 
+        var person = prompt("Please enter Number");
+
+        var totalNum = 1;
+
+        for(var i = 0; i < person; i++){
+                totalNum = totalNum * (person - i);
+        }    
+
+        console.log(totalNum);
+    */    
+    
+
+
+    // String Palindrome
+
+    /*    
+        function checkStr(str){
+            newStr = '';
+            for(var i = str.length -1 ; i >=0; i--){
+                newStr = newStr + str[i];
+            }
+
+            //console.log(newStr);
+            return newStr === str ? console.log(true) : console.log(false) ;
+        };
+
+        checkStr('MadaM';);
+    */
+    
+
+    // max number and min number
+
+    /*
+        
+        var tempArray = [10, 20,100, 30, 50, ];
+        largest = tempArray[0];
+        
+        for(var i = 0; i < tempArray.length; i++){
+                if(largest < tempArray[i]){
+                        largest = tempArray[i];
+                }
+        }
+
+        console.log(largest);
+        
+    */
+   
+    // Remove Duplicate From Array
+    // index of method returns (-1) if value does not exist in array
+     
+   /*
+        let newTemp = [1, 2, 3, 3, 4, 4, 5];
+        let originArr = [];
+        
+        for(let i = 0; i < newTemp.length; i++){
+                (originArr.indexOf(newTemp[i]) === -1) ? originArr.push(newTemp[i]) : 'element is there';
+        }
+
+        console.log(originArr);
+   
+   */
+
+    // assign object to another object contains same value after change problem
+    // .assign({}, a) :- {} means creating new object and a is assigned to new object which is b     
+
+        let a = {
+             name : 'Niranjan'
+         };
+
+    //let b = a; 
+    //let b = Object.create(a); 
+    let b = Object.assign({}, a);
+
+    b.name = 'Pavan';
+
+    console.log(a);
+    console.log(b); 
+
+
+    
+    </script>
+</body>
+</html>

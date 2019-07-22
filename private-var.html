@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Analaytical Program</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+    <script>
+
+        function Person(){
+            debugger
+            var private = 'Niranjan';
+
+            return function(){
+                debugger
+                return private;
+            }
+
+        }
+
+    //Person();
+    // if you  do call direclty it will return funtion not  private 
+    // but if u assign to var and then call it will return the private  
+   // becuase after assign you have called return function
+
+        debugger
+    var testCon = Person();
+    debugger
+    
+          
+    console.log(testCon());
+
+    </script>
+</body>
+</html>

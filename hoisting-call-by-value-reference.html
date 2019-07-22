@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+</head>
+<body>
+
+    <script>
+    // Without call or referance 
+    
+    /*
+      var a = 100;
+      
+      function testlast(){
+          console.log('Exp  200 --->', a);
+      };
+
+      function test (){
+            console.log('Exp 300  --->', a);
+            a = 200;
+            test2(); 
+      };
+
+      function test2(){
+            console.log('Exp  undefined  --->', a); 
+            var a = 1000;
+            console.log('Exp  1000  --->', a); 
+             a = 400; 
+            console.log('Exp  400  --->', a);
+            testlast();
+      } 
+
+      a = 300; 
+      console.log('Exp 300  --->', a);  
+      test(); 
+      console.log('Exp 200  --->', a);
+    
+    */
+
+    // global A = 200
+
+    // local A =  400 {  }
+    
+
+    // call by value with hoisting 
+ 
+    /*
+      var test = 100;
+
+      function a(test){
+        console.log('Exp 100 --->', test); // it wont get undefined because that is param send by calling function
+        var test = 500;
+        console.log('Exp 500  --->', test);
+        c(test);
+      };
+
+      function b(test){
+        console.log('Exp null / 5000 --->', test);
+      };
+
+
+      function c(test){
+        console.log('Exp 500 --->', test);
+         b(null);
+      };
+
+
+      a(test);
+      console.log('Exp 100  --->', test);
+      test = 5000;
+      b(test);
+      console.log('Exp 5000 --->', test);
+    
+    */ 
+
+    /*
+
+        var test = {
+            name: 'Niranjan',
+            age : 29
+        };
+
+
+        function A(test){
+            console.log('Exp Anuja --->', test);
+            B(test);
+        }
+
+        function B(test){
+            console.log('Exp Anuja --->', test);
+        }
+
+        function C(test){
+            console.log('Exp Pavan --->', test);
+            test = 'anuja';    
+            A(test);
+        }
+
+        console.log('Exp Niranjan --->', test);
+        test.name = 'Pavan';
+        C(test);
+
+        console.log('Exp Pavan --->', test);
+
+    */
+
+    </script>
+    
+</body>
+</html>

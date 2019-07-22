@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+     
+</head>
+<body>
+
+* Primitative :-
+
+        * string
+        * number
+        * Boolean
+        * Null
+        * Undefined
+
+
+* Object :-
+
+        * array
+        * function
+        * Object
+
+* - Object is collection key-value pair
+    
+1 - Every JavaScript  object has a Prototype property, Which makes inheritance possible;
+    It should be object and Not Primitative data should be assigned to it
+
+2 - when certain method or propery is called, search get start from object itself, And if can not found,
+    search moves in to the object Prototype, procces continues untill method is found
+    That is called as Prototype Chain. Else Undefined
+
+
+</body>
+</html>

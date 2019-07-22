@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Analytics</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+
+<body> 
+    <script>
+
+
+       
+    //   var tempArr = [1, 2, 5, 3, 3, 4];
+
+    //   var originalArr = [];
+
+    //   len = tempArr.length;
+    //   // For performance of for loop
+
+    //   for(var i = 0; i < len; i++){
+    //       if(originalArr.indexOf(tempArr[i]) === -1){
+    //             originalArr.push(tempArr[i]);
+    //       }
+    //   }
+
+    //   originalArr.sort();
+    //   console.log(originalArr);
+
+ 
+    
+  
+ 
+    
+
+        let tempArr = [1, 2, 3, 3, 4, 5];
+
+        //let originalArr =  new Set(tempArr); -> It will not retun Array
+
+        let originalArr = [... new Set(tempArr)];
+        // spread Operator for returning Array
+
+
+        console.log(originalArr);
+    
+   
+
+    </script> 
+</body>
+
+</html>

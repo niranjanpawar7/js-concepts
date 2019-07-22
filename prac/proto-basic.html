@@ -1,0 +1,48 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/fabric.min.js"></script>
+
+</head>
+<body>
+
+
+	<div class="container">
+  <div class="clearfix"></div>
+  <br>
+  <br><br>
+
+   <script>
+
+ $(document).ready(function(){
+
+    function Person(first, last) {
+        this.firstName = first;
+        this.lastName = last;
+    }
+
+
+    var Niranjan = new Person('Niranjan', 'Pawar');
+
+    var Roshan = new Person('Roshan', 'Pawar');
+
+    Person.prototype.getFullName = function() {
+          var full =  this.firstName + ' ' + this.lastName;
+           console.log('full Name -: ', full);
+           return full
+    };
+
+    Niranjan.getFullName();
+
+
+  });
+
+ </script>
+
+
+
+     </div>
+     </body>
+     </html>

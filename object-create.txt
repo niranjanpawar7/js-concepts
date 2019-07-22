@@ -1,0 +1,20 @@
+
+1 - It makes the prototype inheritance possible in javascript
+
+
+2 - Create new Object with prototype set to certain object 
+    
+    Eg :- 
+        var john = Object.create(existingObj);
+
+
+3 - Object Create accpets second parameter
+    
+    Eg :- 
+        var john = Object.create(personProto,{  
+            name : {value : 'Pavan'},
+            yearofBirth : {value : 1993 }
+        })
+
+                    
+4 - 

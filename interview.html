@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+</head>
+<body>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+    <script>
+
+    // Odd and Even
+
+    /*
+         $(document).ready(function(){
+            alert('papa')
+             ulLength = $('ul li').length;
+
+            for (let i = 0; i <= ulLength; i++) { 
+                    (i % 2 === 0)? console.log('Even') : console.log('ODD'); 
+            } 
+              
+         })
+    */ 
+
+    // Inheritance
+
+    /*
+        const a = function(x){
+            this.x = x;
+        };
+
+        const b = function(x, y){
+            a.call(this);
+            debugger
+            this.x = x;
+            this.y = y;
+        };
+
+        
+        b.prototype.getX = function(){
+            console.log('GetX -->', this);
+        };
+
+        b.prototype.getY = function(){
+            console.log('GetY -->', this);
+        }
+
+        const newB = new b('x', 'y');
+         
+        
+
+        newB.getX();
+        newB.getY();
+    
+    */
+
+   // addition of Array
+
+    /*
+    
+        let tempArray = [1, 2, 3, 4, 5, 20];
+        
+        let totalSum = tempArray.reduce((a, b) => {
+                return a + b;
+        }); 
+
+        console.log(totalSum);
+    
+    */ 
+
+    // Find missing element from array
+
+    /*
+        let arrtmp = [1, 2, 3, 4, 5, 7];
+
+        function findMissing(array){
+            let totalCount = 0;
+
+            for(let i = 0; i < arrtmp.length; i++){
+                totalCount+= arrtmp[i];
+            }
+            
+            let n = arrtmp.length + 1;
+            console.log((n*(n + 1)/2))
+            let expectedCount = Math.floor((n*(n + 1)/2));
+
+            return expectedCount - totalCount; 
+
+        }
+
+      let missing =   findMissing(arrtmp);
+
+        console.log(missing);
+
+    */
+
+    /*
+         const arr = [1, 2, 3, 4];
+
+          function calCulation(arr){
+            let arr1 = arr.shift();
+            
+            let A = arr.reduce((a, b) => {
+               return  a + b;
+            }) 
+
+            console.log(A);
+
+            let arr2 = arr.shift();
+
+            let B = arr.reduce((a, b) => {
+               return  a + b;
+            }) 
+
+            console.log(B);
+
+
+            let arr3 = arr.shift();
+
+            let C = arr.reduce((a, b) => {
+               return  a + b;
+            }) 
+
+            console.log(C);
+            
+            // convert into array yet to de done for A,B,C
+            
+            let arrMaxMin =  [9, 7, 4];
+            
+
+            let maxNum = arrMaxMin[0];
+
+            for(i = 0; i < arrMaxMin.length; i++){
+                debugger;
+                   if(maxNum < arrMaxMin[i]){
+                        maxNum = arrMaxMin[i];
+                   } 
+            }
+
+
+            console.log(maxNum);
+
+
+          }
+
+
+          calCulation(arr);
+
+    */
+
+
+    // how many duplicates in array
+
+    /*
+
+        let arr = [1,2, 3, 3, 3];
+        let origin = [];
+        let count = 0;
+        let data;
+        
+        function removeDuplicates(arr){
+            for(let i = 0; i < arr.length; i++) {
+                    if(origin.indexOf(arr[i]) === -1){
+                        origin.push(arr[i]);
+                    }else{
+                        debugger
+                        count; 
+                        data = arr[i]++;
+                        count++
+                    }  
+            }
+
+        (count.length !== 0) ? count++ : 'nothing' 
+            
+            console.log('count', count);
+            console.log('Duplicate nUm', data);
+
+        }
+
+        removeDuplicates(arr);
+
+    */
+
+     // hoisting + eventloop    
+    /*
+
+        const arr = [10, 120, 30, 40];
+
+        for (let i = 0; i < arr.length; i++) {
+
+                setTimeout(() =>{
+                        console.log(`index: ${i} & element is ${arr[i]}`);
+                }, arr[i]); 
+                
+                // passing the element as time in setimout so it will excute according to time
+            
+        };
+    */
+
+
+
+    // any function you can call as first function in method chaining
+    // retun this only
+
+    /*
+      let x = {
+
+          a(){  
+                console.log(1);
+                return this;
+          },
+
+          b(){  
+            console.log(2);
+            return this;
+          }
+      }
+
+      x.b().a()
+    */
+
+
+    // let and const both do not get attached to window Obj  it will be undefined
+        /*
+        var a = 10; 
+        let b = 20;
+        const c = 30;
+
+
+        console.log('A', this.a)
+        console.log('B', this.b)
+        console.log('C', this.c) 
+        */
+    
+
+    /*
+        var x = 10;
+
+        function test(x){
+        x = x + x;
+        console.log(x); // 20 
+        
+        }
+
+        test(x);
+        console.log(x); // 10
+    */ 
+
+
+    // create duplicates in array
+     
+    //1st eg 
+    
+    /*
+        let arrTemp = [1, 2, 3,4, 5];
+
+        let arr = arrTemp;
+
+        arrTemp = [...arrTemp, ...arr];
+
+        console.log(arrTemp);
+    */    
+
+    /*
+        function duplicateDo(arr){
+            originaLen = arr.length;
+            for (let i = 0; i < originaLen; i++) { 
+                let arrLen = originaLen * 2;  
+                (originaLen < arrLen)? arr.push(arr[i]) : '';
+            }; 
+            return arr; 
+        } 
+        let data = duplicateDo([1, 2, 3, 4, 5]); 
+        console.log(data);
+    
+    */
+
+   // trace the output 
+
+    /*     
+        var y = 1;
+        if (function f(){}) { 
+            debugger
+            y += typeof f;
+        }
+        console.log(y); 
+        
+    */
+
+    // how to empty array 
+
+    /*  
+      
+        var arrayList =  ['a','b','c','d','e','f'];
+        arrayList.length = 0;
+        arrayList = [];
+    
+    */
+
+    //if an object is an array or not?   
+
+    /*
+
+        var arrayList = [1,2,3];
+        console.log(Array.isArray(arrayList));
+    
+    */
+
+    /*
+
+        var output = (function(x){
+            delete x; 
+            return x;
+        })(5);
+        
+        console.log(output); // 5
+    
+    */ 
+    
+    /*
+
+        var Employee = {
+        company: 'xyz'
+        }
+        var emp1 = Object.create(Employee);
+        debugger;
+        delete emp1.company
+        console.log(emp1.company); 
+    
+    */    
+
+    // Xyz becuase it is proto data
+    //The delete operator doesn't delete prototype property.
+    
+   /*
+
+    var bar = true;
+    console.log('Exp  1 --->', bar + 0);   
+    console.log('Exp  truexyz --->', bar + "xyz");  
+    console.log('Exp  2 --->', bar + true);  
+    console.log('Exp  1 --->', bar + false);  
+
+   */
+ 
+    /*
+        var z = 1;
+        var y = z = typeof y;
+        console.log('y', y);  
+    */
+   // The output would be undefined. According to the associativity rule, 
+   // operators with the same precedence are processed based on the associativity property of the operator. 
+   // Here, the associativity of the assignment operator is Right to Left, so typeof y will evaluate first , which is undefined.
+
+  
+   // Mod Program
+
+    /*
+      function testOdd(){
+
+            for (let i = 0; i <= 100; i++) { 
+
+                if(i%3 === 0){
+                       console.log('BUZ') 
+                }
+                else if(i%5 === 0){
+                    console.log('Fizz') 
+                }
+                else if(i%5 === 0 && i%3 === 0 ){
+                    console.log('Fizz BUZZ') 
+                }
+                else{
+                    console.log(i);
+                }  
+                
+            }
+
+      }  
+
+      testOdd(); 
+    */
+    
+
+   // how to delete proto obj
+
+    /* 
+        var xyz = {name: 'niranjan'};
+
+        var z =  Object.create(xyz);
+        // delete proto properties
+        delete z.__proto__.name 
+        console.log(z);
+        console.log(xyz);
+
+    */
+    </script>
+    
+</body>
+</html>

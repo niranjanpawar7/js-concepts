@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Promises</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+    <script>
+    
+        // cleanRoom, cleanGarbadge, getIcecreme 
+    
+        cleanStatus = true;
+
+        var promObj = new Promise((resolve, reject) => { 
+
+                if(!cleanStatus){
+                    reject('Please clean the room');    
+                }
+                else{
+                    resolve('Thanks for cleaning the room')
+                }
+        });
+
+        promObj
+        .then(
+            (resp) =>{
+                console.log('Resp ------>', resp);
+            }
+        )
+        .catch(
+            (error) => {
+                console.log('error ------>', error);
+        }); 
+
+    
+
+
+
+
+        // for 2 argumnents from calling function
+
+
+     /*    
+       var tempArry = 6;
+        var tempArry1 = 2;
+
+
+        let getData = (arr, arr2) => { 
+            debugger
+            return new Promise ((resolve, reject) => {
+                resolve(arr, arr2);
+            })
+        }
+
+        let proccesData = (arr) => { 
+            return new Promise ((resolve, reject) => {
+                resolve(calc =  arr[0] + arr[1]);
+            })
+                
+            
+        }
+
+        
+        getData([tempArry, tempArry1])
+        .then(resp =>
+            { 
+                return (proccesData(resp));
+            }
+        )
+        .then((resp =>{
+                console.log(resp + ' is Answer');
+        }))
+  
+    */
+    
+    
+    /*
+
+        let add = (msg) => {
+                let calCulation = msg[0] + msg[1] + msg[2];
+                console.log(calCulation + ' is Final Answer'); 
+        };
+
+        let getData = new Promise(function(resolve,reject){
+                let calData = [1 , 2, 3];
+                resolve(calData);
+        });
+
+
+        getData.then(
+            (response) => { 
+                return add(response);
+            }
+        )
+        .catch(
+            (error) =>{
+                console.log(error);
+            }
+        ) 
+     */
+
+
+    </script>
+</body>
+</html>

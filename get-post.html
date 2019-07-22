@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Get Post</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+
+<body> 
+    <!-- <button> Clik me</button> 
+    <div id="rawdata"></div>  -->
+
+
+        <input type="text" name="name">
+        <p id="test"></p>
+
+    <script>
+    // get method
+    
+    /*   
+        $(document).ready(() =>{
+              var url = 'object-basic.txt';
+                $('button').on('click', () =>{
+                        $.get(url, (data, status) => {
+                            if(data){
+                                   $('#rawdata').html(data); 
+                                   alert(status);
+                            }else{
+                                alert('no data');
+                            }
+                        })
+                })
+        }); 
+
+
+    */
+
+    // post method 
+
+
+    $(document).ready(() => {
+        $('input').on('keyup', () =>{
+            var name = $('input').val();
+            var url = 'xzysmsm.php'
+            $.post(url,{ data : name}, (data, status)=>{
+                if(data){
+                                   $('#rawdata').html(data); 
+                                   alert(status);
+                            }else{
+                                alert('no data');
+                            }
+            })
+        })
+    })   
+    
+    </script>
+</body>
+
+</html>

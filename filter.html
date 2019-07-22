@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Filter Map Reduce</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+    <script>
+        
+   
+    var age = [20, 30, 40, 50];
+    /* 
+       - Filter makes data filteration 
+       - Do not change orignal Array
+       - you dont have to push data in new array 
+       - it will return data according to your condtion
+       - Eg - [ 30, 40, 50 ] will return not 20
+       
+
+    */
+    
+    
+    /*
+        var checkAge = age.filter(Item =>{
+                if(Item >= 30){
+                        return true;
+                }
+        });
+
+        console.log('Origanal Array', age);
+        console.log('New Array', checkAge);
+    
+    */   
+
+
+
+    //MAP
+    /*
+     
+     - In map it show undefined if that data is in condition
+     - You can perform operations on new array 
+     - which you can not do in Filter
+    
+    */
+
+    
+        var checkAge = age.map(Item =>{
+            if(Item >= 30){
+                    return true;
+            }
+        });
+
+        console.log('New Array', checkAge); 
+
+        var checkAge = age.map(Item =>{ 
+            return Item * 2; 
+        }); 
+         
+        console.log('New Array', checkAge);
+    
+      
+    //Find
+ 
+        // it filters data and returns only one record where condition  meets
+
+
+    /*
+        var checkAge = age.find(Item =>{
+                if(Item >= 30){
+                        return true;
+                }
+        });
+
+        console.log('New Array', checkAge);
+
+    */    
+    </script>
+</body>
+</html>

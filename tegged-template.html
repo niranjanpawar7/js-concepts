@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+     
+</head>
+<body>
+    
+    <script>
+        
+       // if function do not have arguments it will not take params from templates strinng
+       // it will call the function only
+       // use can use rest parameter if you dont know hom many params will come
+
+       // if u pass the function call in template string it will return data actually
+
+        function person(){
+            return 'Niranjan';
+        }
+
+        const getName = person `Pawar`;
+        console.log('First -->', getName);
+
+
+        function highlight(...data1) {
+            return data1;
+              // do something
+        }
+
+        const name = 'Snickers';
+        const age = '100';
+        const sentence = ` highlight My dog's name is ${name} and he is ${age} years old`;
+        console.log('Second -->', sentence);
+
+
+    </script>
+
+</body>
+</html>

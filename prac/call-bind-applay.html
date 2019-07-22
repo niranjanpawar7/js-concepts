@@ -1,0 +1,94 @@
+  <html>
+  <head>
+
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+/* APPly
+  function Person(first, last) {
+    debugger;
+      this.firstName = first;
+      this.lastName = last;
+  }
+
+  function Salary(firstName) {
+    debugger;
+    Person.apply([firstName]);
+    debugger;
+    console.log(firstName);
+  }
+
+  var getSalary = new Salary(['Niranjan', 'Pawar', 1000]);
+*/
+
+/* CALL
+function Person(sal, first, last) {
+
+
+  this.firstName = first;
+  this.lastName = last;
+  Salary.call(this, sal);
+  console.log(this)
+  return this;
+}
+
+function Salary(sal) {
+  this.sal = sal;
+
+}
+
+
+var GetSal = new Person(1000, 'Niranjan', 'Pawar');
+
+*/
+
+// Bind
+
+// var person = {
+
+//   name: "James Smith",
+//   hello: function(thing) {
+//     console.log(this.name + " says hello " + thing);
+//   }
+
+// }
+
+// person.hello("world");  // output: "James Smith says hello world"
+// var helloFunc = person.hello.bind({ name: "Jim Smith" });
+// helloFunc("world");  // output: Jim Smith says hello world"
+
+
+var Person = {
+  name : 'Niranjan',
+  getName : function(data) {
+      console.log(this.name + ' ' + data);
+  }
+}
+
+Person.getName('IS PAPA');
+
+var ObjBind = Person.getName.bind({name: 'Pavan'});
+
+ObjBind('IS PAPA');
+
+
+
+})
+</script>
+
+  </body>
+  </html>

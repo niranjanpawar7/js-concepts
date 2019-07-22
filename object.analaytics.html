@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+    <script>
+    
+    // if u assign one var to another : -
+    // both will hold the same memory, So if u change any one both value will get reflected
+    // Both object will get change, If any addition deletion modification to the object
+
+    // To overcome from this problem : -
+    // You can use Object.creat() method to resolve the problem
+
+
+    let a = {
+        name : 'Niranjan'
+    };
+
+    
+    let b = a;
+    //let b = Object.create(a);
+     
+    b.name = 'pavan';
+    b.lastname = 'Pawar';
+
+    console.log('a', a);
+    console.log('b', b);
+        
+
+    var papa = 'Shahaji Pawar';
+
+    var aai = papa;
+    aai = 'shobha Pawar'
+
+    console.log('AAi', aai);
+    console.log('papa', papa);   
+
+    </script>
+</body>
+</html>

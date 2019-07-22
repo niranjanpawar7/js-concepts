@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Spread Operator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    
+    <script>
+    // rest parameter means you dont know about rest, 
+    // how many params calling function will have  
+
+
+    // when you know that 3 params are fixed
+    // but after that many more will come so thats called rest parameter
+    // to handle this situation we use spread Operator    
+    // which retuns  array
+    
+    function testCalculation(a, b, c, ...n){
+            console.log(`${a} ${b} ${c}`);
+            console.log(n);
+    }
+
+    testCalculation(10, 20, 30, 50, 60, 70, 80, 90)
+
+
+    </script>
+</body>
+</html>
